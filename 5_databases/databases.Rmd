@@ -44,7 +44,7 @@ pre {
 
 
 ```{r databases-1, include = FALSE}
-knitr::opts_chunk$set(cache = TRUE, comment = "")
+knitr::opts_chunk$set(cache = FALSE, comment = "")
 
 library(tidyverse)
 library(DBI)
