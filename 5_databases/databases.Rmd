@@ -2070,8 +2070,9 @@ system.time(
 Insert a second table into our database.
 
 ```{r databases-125 }
+DBI::dbDisconnect(con)
 db_path <- fs::path_abs("pixar.duckdb")
-con <- DBI::dbConnect(duckdb::duckdb(dbdir = db_path))
+con <- DBI::dbConnect(duckdb::duckdb(dbdir = db_path, read_only = FALSE))
 DBI::dbWriteTable(con, "academy", pixarfilms::academy, overwrite = TRUE)
 DBI::dbExecute(con, "CREATE UNIQUE INDEX academy_pk ON academy (film, award_type)")
 DBI::dbExecute(con, "CREATE INDEX academy_fk ON academy (film)")
