@@ -883,7 +883,7 @@ pixar_films %>%
   add_count(release_year = year(release_date)) %>%
   filter(n > 1) %>%
   select(film, release_year, n) %>% 
-  arrange(release_date)
+  arrange(release_year)
 ```
 ]
 
