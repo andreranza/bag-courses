@@ -1654,7 +1654,7 @@ films_two_per_year %>%
 .pull-right[
 ```{r databases-97 }
 films_two_per_year %>%
-  arrange(release_date) %>%
+  arrange(y) %>%
   show_query()
 ```
 ]
@@ -1678,7 +1678,7 @@ films_two_per_year_mat
 .pull-right[
 ```{r databases-99 }
 films_two_per_year_mat %>%
-  arrange(release_date) %>%
+  arrange(y) %>%
   show_query()
 ```
 ]
