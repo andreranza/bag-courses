@@ -42,6 +42,14 @@ pre {
 }
 </style>
 
+```{r databases-0 }
+duck_files <- list.files(
+  "5_databases",
+  pattern = "\\.duckdb$|\\.wal$",
+  full.names = TRUE
+)
+file.remove(duck_files)
+```
 
 ```{r databases-1, include = FALSE}
 knitr::opts_chunk$set(cache = FALSE, comment = "")
